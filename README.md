@@ -22,6 +22,3 @@ Disponible en [GitHub Pages](#).
 - HTML5
 - CSS3
 - JavaScript
-
-
-   git clone https://github.com/gmariosinigalle-cloud/Amigo-Secreto.git
