@@ -8,7 +8,7 @@ También se puede utilizar para sorteos.
 Disponible en [GitHub Pages](#).
 
 ## 📸 Capturas
-![Vista previa](./assets/preview1.png)
+![Vista previa](./assets/Preview1.png)
 
 
 ## 📂 Características
