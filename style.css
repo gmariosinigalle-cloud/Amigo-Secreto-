@@ -264,3 +264,50 @@ ul {
 .boton-eliminar:hover {
     transform: scale(1.2);
 }
+
+/* ====== Media Queries (Responsivo) ====== */
+@media (max-width: 768px) {
+    .input-section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .name-list li {
+        flex: 0 0 48%; /* 2 por fila */
+        font-size: 14px;
+    }
+
+    .button, .button-add, .button-draw {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .name-list li {
+        flex: 0 0 100%; /* 1 por fila */
+        font-size: 14px;
+    }
+
+    .button, .button-add, .button-draw {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
