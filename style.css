@@ -1,0 +1,266 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #0057e7;       /* azul base */
+    --color-button-hover: #0041b3; /* azul hover */
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/franky-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    padding: 100px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: rgba(255, 255, 255, 0.7); /* semi transparente */
+    backdrop-filter: blur(8px); /* efecto difuminado */
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 50px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.4); /* semitransparente */
+    backdrop-filter: blur(6px); /* difuminado */
+    border-radius: 32px;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.section-title {
+    font-family: "Merriweather", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 320px; /* o el que quieras */
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* espacio entre botones */
+}
+
+/* Para que los botones no ocupen todo el ancho */
+.button {
+  display: inline-flex;       /* Ajusta el tamaño al contenido */
+  align-items: center;
+  gap: 8px;                   /* Espacio entre texto e ícono */
+  padding: 5px 10px;          /* Poco padding para que no quede muy grande */
+  background-color: var(--color-button);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  white-space: nowrap;        /* Para que el texto no haga salto de línea */
+}
+
+.button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: #28a745;           /* verde */
+    color: white;
+    border-radius: 0 25px 25px 0;       /* solo borde redondeado a la derecha */
+    border: 2px solid #000;              /* borde igual al input */
+    border-left: none;                   /* sin borde izquierdo para “pegar” con input */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #218838;           /* verde oscuro al pasar mouse */
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.name-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* espacio entre nombres */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.name-list li {
+    list-style: none;
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+    
+    /* Ancho fijo para que entren 5 por fila con gap */
+    flex: 0 0 calc((100% - 40px) / 5);
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 10px; /* espacio entre icono y texto */
+}
+
+.button img {
+    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+}
+
+.button:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Botón de eliminar (❎) */
+.boton-eliminar {
+    background: transparent;   /* Sin fondo */
+    border: none;              /* Sin borde */
+    padding: 0;                /* Sin padding extra */
+    border-radius: 0;          /* Sin bordes redondeados */
+    font-size: 1.2em;          /* Tamaño del emoji */
+    cursor: pointer;
+    outline: none;
+    color: inherit;         /* Hereda color del texto/emoji */
+    box-shadow: none;       /* Quita cualquier sombra */
+    transition: transform 0.2s ease;
+}
+
+.boton-eliminar:hover {
+    transform: scale(1.2);
+}
